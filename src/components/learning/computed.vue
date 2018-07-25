@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>计算属性</h1>
     <p>{{revermsg}}</p>
     <p>{{reverse()}}</p>
     <p>{{now}}</p>
@@ -9,6 +10,7 @@
       <input type="text" v-model="question">
       <p>{{question}}</p>
     </div>
+    <p>{{letfun()}}</p>
   </div>
 </template>
 
@@ -23,9 +25,35 @@ export default {
       question: ''
     }
   },
+  created () {
+    // this.letfun()
+  },
   methods: {
     reverse () {
       return this.message.split('').reverse().join('')
+    },
+    letfun () {
+      let arr1 = [1, 2]
+      let arr2 = [...arr1, 3]
+      console.log(arr2)
+      let [x = 1] = [undefined]
+      console.log(x)
+      // return [x, y]
+      // let temp
+      // console.log(temp)
+      // temp = 123
+      // console.log(temp)
+      // for (let i = 0; i < 10; i++) {
+      //   let i = 'abc'
+      //   console.log(i)
+      // }
+      let onefun = () => {
+        console.log('111')
+      }
+      onefun()
+    },
+    [abc]: function () {
+      return 22222222222
     }
   },
   computed: {
