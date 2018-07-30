@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>计算属性</h1>
+    <h1>计算属性 <slot name="addtitle"></slot></h1>
     <p>{{revermsg}}</p>
     <p>{{reverse()}}</p>
     <p>{{now}}</p>
@@ -11,10 +11,12 @@
       <p>{{question}}</p>
     </div>
     <p>{{letfun()}}</p>
+    <p>{{storecon}}</p>
   </div>
 </template>
 
 <script>
+import { componentzj } from './components.vue'
 export default {
   data () {
     return {
@@ -51,10 +53,10 @@ export default {
         console.log('111')
       }
       onefun()
-    },
-    [abc]: function () {
-      return 22222222222
     }
+  },
+  components: {
+    componentzj
   },
   computed: {
     revermsg () {
@@ -65,6 +67,9 @@ export default {
     },
     fullname () {
       return this.firstname + ' ' + this.lastname
+    },
+    storecon () {
+      return this.$store.state.count + 10
     },
     fullname2: {
       get () {

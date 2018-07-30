@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>事件方法</h1>
     <button @click="numbers += 1">加1</button>
     <p>{{ numbers }}</p>
     <p>
@@ -50,6 +51,9 @@ export default {
       numbers: 1
     }
   },
+  created () {
+    this.test()
+  },
   methods: {
     clicksj (event) {
       alert('数字是' + this.numbers)
@@ -62,6 +66,12 @@ export default {
     },
     onceclick () {
       alert('hello')
+    },
+    test () {
+      let {toSring: s} = 1113333
+      console.log(s === Number.prototype.toString)
+      const [a, b, c, d, e] = 'hello'
+      console.log(a, b, c, d, e)
     }
   }
 }

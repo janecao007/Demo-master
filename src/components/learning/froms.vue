@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>表单</h1>
     <p>
       <textarea name="" id="" cols="30" rows="10" v-model="contents"></textarea>
     </p>

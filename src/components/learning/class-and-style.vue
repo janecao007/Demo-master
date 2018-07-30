@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Class 与 Style 绑定</h1>
     <p :class="{active:isActive, 'backgroundColor': '#000'}">test style</p>
     <p :class="objclass">objclass</p>
     <p :style="objstyle">objstyle</p>
