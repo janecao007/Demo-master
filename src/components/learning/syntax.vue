@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       msg: 'jane',
       msghtml: '<span style="color:red">jane</span>',

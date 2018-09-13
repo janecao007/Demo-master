@@ -18,10 +18,15 @@
     <p>
       <button @click.right="clicksj">右键</button>
     </p>
+    <h1>自定义方法</h1>
+    <p>弹出内容</p>
+    <eventchild @parentsevent="alercon"></eventchild>
   </div>
 </template>
 
 <script>
+import eventchild from './eventchild.vue'
+import { test } from '../js/test.js'
 // 鼠标点击事件
 // .left
 // .right
@@ -53,16 +58,40 @@ export default {
   },
   created () {
     this.test()
+    this.foroffun()
+    this.setfun()
   },
   methods: {
+    setfun () {
+      let arr6 = [ {0: 'a', 1: 'b'} ]
+      arr6.forEach(v => {
+        console.log(v[0])
+      })
+    },
+    foroffun () {
+      let arr5 = [{
+        one: '1'
+      },
+      {
+        one: '2'
+      }]
+      for (let arrcontent of arr5) {
+        console.log(arrcontent.one)
+      }
+    },
     clicksj (event) {
       alert('数字是' + this.numbers)
       if (event) {
         alert(event.target.tagName)
       }
     },
+    alercon (a) {
+      console.log('父事件内容')
+      alert('父组件事件弹出内容')
+    },
     say (say) {
       alert(say)
+      test()
     },
     onceclick () {
       alert('hello')
@@ -73,6 +102,9 @@ export default {
       const [a, b, c, d, e] = 'hello'
       console.log(a, b, c, d, e)
     }
+  },
+  components: {
+    eventchild
   }
 }
 </script>

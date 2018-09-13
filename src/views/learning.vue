@@ -28,6 +28,7 @@
     <p>{{this.$store.state.count}}</p>
     <button @click="addcount">add</button>
     <slotcon></slotcon>
+    <vue-life></vue-life>
   </div>
 </template>
 
@@ -44,6 +45,7 @@ import componentzj from '@/components/learning/components.vue'
 import tabOne from '@/components/learning/tabone.vue'
 import tabTwo from '@/components/learning/tabtwo.vue'
 import slotcon from '@/components/learning/slotcon.vue'
+import vueLife from '@/components/learning/vueLife.vue'
 export default {
   data () {
     return {
@@ -119,7 +121,8 @@ export default {
     componentzj,
     tabOne,
     tabTwo,
-    slotcon
+    slotcon,
+    vueLife
   }
 }
 </script>
