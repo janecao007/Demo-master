@@ -5,7 +5,10 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/todo">Todo</router-link> |
       <router-link to="/start">start</router-link> |
-      <router-link to="/learning">learning</router-link>
+      <router-link to="/learning">learning</router-link> |
+      <router-link to="/pictureList">pictureList</router-link> |
+      <router-link to="/storeListImages">storepic</router-link> |
+      <router-link to="/listimg">图片展示</router-link>
     </div>
     <router-view/>
   </div>

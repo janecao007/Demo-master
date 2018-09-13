@@ -5,10 +5,13 @@ import About from './views/About.vue'
 import Todo from './views/Todo.vue'
 import start from './views/start.vue'
 import learning from './views/learning.vue'
-
+import listimg from './views/listimg.vue'
+import pictureList from './views/pictureList.vue'
+import storeListImages from './views/storeListImages.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -34,6 +37,22 @@ export default new Router({
       path: '/learning',
       name: 'learning',
       component: learning
+    },
+    {
+      path: '/listimg',
+      name: 'listimg',
+      component: listimg
+    },
+    {
+      path: '/pictureList',
+      name: 'pictureList',
+      component: pictureList
+    },
+    {
+      path: '/storeListImages',
+      name: 'storeListImages',
+      component: storeListImages
     }
+
   ]
 })
