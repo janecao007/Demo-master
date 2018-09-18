@@ -8,7 +8,10 @@
       <router-link to="/learning">learning</router-link> |
       <router-link to="/pictureList">pictureList</router-link> |
       <router-link to="/storeListImages">storepic</router-link> |
+<<<<<<< HEAD
       <router-link to="/elementUiTable">elementUiTable</router-link> |
+=======
+>>>>>>> b489bf2fe01618c2d882d1e12e8c47f796152126
       <router-link to="/listimg">图片展示</router-link>
     </div>
     <router-view/>
