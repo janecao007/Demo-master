@@ -80,6 +80,7 @@ export default {
       this.edit = true
     },
     handleSuccess (index, rows) {
+      rows[index].name = this.input10
       this.edit = false
     },
     handleDelete (index, rows) {

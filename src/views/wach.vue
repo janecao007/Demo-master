@@ -16,10 +16,7 @@
     <p>{{foreacharr}}</p>
     <p>{{maparr}}</p>
     <p>{{reducearr}}</p>
-<<<<<<< HEAD
     <p>{{janefun(this.myobj)}}</p>
-=======
->>>>>>> b489bf2fe01618c2d882d1e12e8c47f796152126
   </div>
 </template>
 
@@ -60,10 +57,6 @@ export default {
       reducearr: Number,
       janearr: []
     }
-  },
-  created () {
-    this.objfor()
-    this.testcontinue()
   },
   created () {
     this.reducefun()
