@@ -15,20 +15,31 @@
       label="姓名"
       width="180">
       <template slot-scope="scope">
-        <el-popover trigger="hover" placement="top">
+        <el-popover v-if="!edit" trigger="hover" placement="top">
           <p>姓名: {{ scope.row.name }}</p>
           <p>住址: {{ scope.row.address }}</p>
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium">{{ scope.row.name }}</el-tag>
           </div>
         </el-popover>
+        <el-input
+        v-if="edit"
+          placeholder="请输入内容"
+          v-model="input10"
+          clearable>
+        </el-input>
       </template>
     </el-table-column>
     <el-table-column label="操作">
       <template slot-scope="scope">
         <el-button
+        v-if="!edit"
           size="mini"
           @click="handleEdit(scope.$index, tableData)">编辑</el-button>
+          <el-button
+          v-if="edit"
+          size="mini"
+          @click="handleSuccess(scope.$index, tableData)">完成</el-button>
         <el-button
           size="mini"
           type="danger"
@@ -43,6 +54,8 @@
 export default {
   data () {
     return {
+      input10: '',
+      edit: false,
       tableData: [{
         date: '2016-05-02',
         name: '王小虎',
@@ -63,6 +76,12 @@ export default {
     }
   },
   methods: {
+    handleEdit (index, rows) {
+      this.edit = true
+    },
+    handleSuccess (index, rows) {
+      this.edit = false
+    },
     handleDelete (index, rows) {
       rows.splice(index, 1)
     }

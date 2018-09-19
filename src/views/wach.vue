@@ -24,11 +24,8 @@
 </template>
 
 <script>
-<<<<<<< HEAD
 import {arrfun} from '@/components/js/index'
 import { abc } from '../components/js/index'
-=======
->>>>>>> b489bf2fe01618c2d882d1e12e8c47f796152126
 export default {
   data () {
     return {
@@ -36,13 +33,10 @@ export default {
       title: '',
       valcon: '',
       text: '',
-<<<<<<< HEAD
       myobj: {
         name: 'jane',
         age: '28'
       },
-=======
->>>>>>> b489bf2fe01618c2d882d1e12e8c47f796152126
       url: 'http://www.runoob.com/js/js-tutorial.html',
       adress: [
         '北京',
@@ -63,7 +57,6 @@ export default {
       numarr: [1, 2, 4, 5, 6, 7],
       foreacharr: [],
       maparr: [],
-<<<<<<< HEAD
       reducearr: Number,
       janearr: []
     }
@@ -71,28 +64,20 @@ export default {
   created () {
     this.objfor()
     this.testcontinue()
-=======
-      reducearr: Number
-    }
   },
   created () {
->>>>>>> b489bf2fe01618c2d882d1e12e8c47f796152126
     this.reducefun()
     this.mapfun()
     this.foreachfun()
     this.filterfun()
     this.arrdis(this.val1, this.val2)
     this.forofun()
-<<<<<<< HEAD
     this.foreachtwo()
-=======
->>>>>>> b489bf2fe01618c2d882d1e12e8c47f796152126
   },
   methods: {
     arrdis (val1 = 3, ...val2) {
       console.log(val2)
     },
-<<<<<<< HEAD
     janefun (object) {
       var values = []
       for (var property in object) {
@@ -100,8 +85,6 @@ export default {
       }
       return values
     },
-=======
->>>>>>> b489bf2fe01618c2d882d1e12e8c47f796152126
     filterfun () {
       const arr = [1, 2, 4, 5, 6, 7]
       this.newarr = arr.filter((val) => { return val > 5 })
@@ -116,7 +99,6 @@ export default {
       // this.reducearr = total
       console.log(this.reducearr)
     },
-<<<<<<< HEAD
     testcontinue () {
       for (var i = 0; i < 10; i++) {
         if (i === 5) continue
@@ -142,11 +124,6 @@ export default {
       for (let i of arr) {
         console.log(i)
       }
-=======
-    mapfun () {
-      const arr = [1, 2, 4, 5, 6, 7]
-      this.maparr = arr.map((val) => { return val * 5 })
->>>>>>> b489bf2fe01618c2d882d1e12e8c47f796152126
     },
     foreachfun () {
       let arr = [{
@@ -161,14 +138,11 @@ export default {
       })
       console.log(arr)
     },
-<<<<<<< HEAD
     foreachtwo () {
       arrfun.foreachfun()
       arrfun.TextTrackList()
       abc()
     },
-=======
->>>>>>> b489bf2fe01618c2d882d1e12e8c47f796152126
     urlcon (val) {
       switch (val) {
         case 0:
